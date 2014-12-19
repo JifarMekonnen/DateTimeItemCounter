@@ -15,7 +15,7 @@ public class DateTimeItemCounter {
 	    
 	    if(array.length==0)
 	      {
-	        System.out.printf("error 1: the DateTime array is empty! \n");
+	        System.out.println("error 1: the DateTime array is empty! \n");
 	        return returnArray;
 	      }
 	    switch (switch_item)
@@ -82,7 +82,7 @@ public class DateTimeItemCounter {
 	 
 	 private int getIndex(DateTime array[], DateTime dt)
 	{
-	    Arrays.sort(array); // may be omited if array is already sorted
+	    Arrays.sort(array); // may be omitted if array is already sorted
 	   int rowBSResult = binarySearch(array, dt); 
 	  
 	   if(rowBSResult >= 0){return rowBSResult;} 
