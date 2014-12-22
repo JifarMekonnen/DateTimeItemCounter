@@ -10,6 +10,7 @@ public class DateTimeItemCounterDataHolder {
 	
     public DateTimeItemCounterDataHolder(){
     	populateDateTimeArray();
+    	
     	System.out.println(dateTimeArray[0]);
     	System.out.println(dateTimeArray[1]);
     	System.out.println(dateTimeArray[2]);
@@ -38,10 +39,11 @@ public class DateTimeItemCounterDataHolder {
 	}
 	
 	void populateDateTimeArray(){
-		DateTime datetime= new DateTime(2014,12,9,20,35);
+		
 		for(int i=0;i<1000;i++){
 			
-			dateTimeArray[i]=datetime.plusMinutes(i*20);
+			DateTime tempo=createDateTime(i);
+			dateTimeArray[i]=tempo;
 		
 		}
 	}

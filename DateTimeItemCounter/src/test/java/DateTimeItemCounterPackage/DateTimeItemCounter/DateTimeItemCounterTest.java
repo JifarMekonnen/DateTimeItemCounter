@@ -56,35 +56,34 @@ public class DateTimeItemCounterTest extends TestCase {
 	
 	public void testcompare_time()
 	    {
-		 int result= dt_count.compare_time(dataHolder.dateTimeArray[5],dataHolder.dateTimeArray[4]);
-	     assertEquals(-1,result );
+		 int result= dt_count.compare_time(dataHolder.dateTimeArray[0],dataHolder.dateTimeArray[4]);
+	     assertEquals(0,result );
 	    }
 	
-    public void testgetTimeDifferenceInMinutes()
+	public void testgetTimeDifferenceInMinutes()
     {
-	 long result= dt_count.getTimeDifferenceInMinutes(dataHolder.dateTimeArray[4],dataHolder.dateTimeArray[104]);
-     assertEquals(2000,result);
+	 long result= dt_count.getTimeDifferenceInMinutes(d10,d11);
+     assertEquals(24,result);
     }
 	
 	public void testgetIndex()
     {
-	 int result= dt_count.getIndex(dataHolder.dateTimeArray,dataHolder.dateTimeArray[0]);
-     assertEquals(0,result );
+	 int result= dt_count.getIndex(array,d13);
+     assertEquals(13,result );
     }
-	
 	
 	public void testbinarySearch()
     {
-	 int result= dt_count.binarySearch(dataHolder.dateTimeArray,dataHolder.dateTimeArray[999]);
-     assertEquals(999,result );
+	 int result= dt_count.binarySearch(array,d13);
+     assertEquals(13,result );
     }
 	
 	public void testgetNumberOfItems()
     {
-	 int[] result= dt_count.getNumberOfItems(dataHolder.dateTimeArray,dataHolder.dateTimeArray[0],dataHolder.dateTimeArray[78]);
+	 int[] result= dt_count.getNumberOfItems(array, d1, d5);
 	 
-     assertEquals("No of Items between the two DateTime items should be ",77,result[1]);
-     assertEquals("The index of the first DateTime item in the array should  0 ",0,result[0]);
+     assertEquals("No of Items between the two DateTime items should be 3 ",3,result[1]);
+     assertEquals("The index of the first DateTime item in the array should be 0 ",1,result[0]);
      
     }
   
