@@ -10,7 +10,8 @@ public class DateTimeItemCounterDataHolder {
 	
     public DateTimeItemCounterDataHolder(){
     	populateDateTimeArray();
-    	
+    	System.out.println(dateTimeArray[0]);
+    	System.out.println(dateTimeArray[3999]);
     }
 	
     void populateDateTimeArray(){

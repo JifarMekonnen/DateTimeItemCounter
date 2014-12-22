@@ -8,7 +8,7 @@ public class DateTimeItemCounter {
 	 
 	 int[] getNumberOfItems(DateTime array[],DateTime d1, DateTime d2)
 	  { 
-	    int returnArray[]={-1,-1};// returnArray[0] will contain index of d1 and returnArray[1] will contain number of items between d1 and d2
+	    int returnArray[]= {-1,-1};// returnArray[0] will contain index of d1 and returnArray[1] will contain number of items between d1 and d2
 	    int switch_item = compare_time(d1,d2);
 	    int  index_d1=getIndex(array,d1);
 	    int  index_d2=getIndex(array,d2);
@@ -75,9 +75,10 @@ public class DateTimeItemCounter {
 	  }
 	 
 	 long getTimeDifferenceInMinutes(DateTime d1,DateTime d2)
-	  {
-	   return (d2.getMillis() - d1.getMillis())/60000;
-	  
+	  {if (compare_time(d1,d2)==0){return 0;}
+	   else if(compare_time(d1,d2)<=0){return -1;}
+	   else {return (d2.getMillis() - d1.getMillis())/60000;}
+	   
 	  }
 	 
 	 int getIndex(DateTime array[], DateTime dt)

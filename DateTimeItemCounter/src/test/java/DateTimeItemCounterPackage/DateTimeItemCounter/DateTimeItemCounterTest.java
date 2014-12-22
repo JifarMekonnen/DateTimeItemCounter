@@ -37,10 +37,10 @@ public class DateTimeItemCounterTest extends TestCase {
 	
 	public void testgetNumberOfItems()
     {
-	 int[] result= dt_count.getNumberOfItems(dataHolder.dateTimeArray,dataHolder.dateTimeArray[3000],dataHolder.dateTimeArray[3999]);
+	 int[] result= dt_count.getNumberOfItems(dataHolder.dateTimeArray,dataHolder.dateTimeArray[30],dataHolder.dateTimeArray[39]);
 	 
-     assertEquals("No of Items between the two DateTime items should be ",998,result[1]);
-     assertEquals("The index of the first DateTime item in the array should  0 ",3000,result[0]);
+     assertEquals("No of Items between the two DateTime items should be ",8,result[1]);
+     assertEquals("The index of the first DateTime item in the array should  0 ",30,result[0]);
      
     }
   
