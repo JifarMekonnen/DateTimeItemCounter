@@ -57,7 +57,7 @@ public class DateTimeItemCounter {
 	    }
 	  }  
 	    
-	 private int compare_time(DateTime d1,DateTime d2)
+	 int compare_time(DateTime d1,DateTime d2)
 	  { 
 	    if(d2.getMillis() == d1.getMillis())
 	        {
@@ -74,13 +74,13 @@ public class DateTimeItemCounter {
 	     
 	  }
 	 
-	 private long getTimeDifferenceInMinutes(DateTime d1,DateTime d2)
+	 long getTimeDifferenceInMinutes(DateTime d1,DateTime d2)
 	  {
 	   return (d2.getMillis() - d1.getMillis())/60000;
 	  
 	  }
 	 
-	 private int getIndex(DateTime array[], DateTime dt)
+	 int getIndex(DateTime array[], DateTime dt)
 	{
 	    Arrays.sort(array); // may be omitted if array is already sorted
 	   int rowBSResult = binarySearch(array, dt); 
@@ -107,7 +107,7 @@ public class DateTimeItemCounter {
 	}
 
 	 
-	 private int binarySearch(DateTime[] array,
+	 int binarySearch(DateTime[] array,
 	                                     DateTime key) {
 	        int low = 0;
 	        int high = array.length - 1;
